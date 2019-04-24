@@ -74,7 +74,7 @@ def plotly_double():
     for item in cur:
         if item[0] not in x:
             x.append(str(item[0]))
-    print(x)
+    #print(x)
 
     y = []
     height = {}
@@ -84,15 +84,15 @@ def plotly_double():
         #print(item)
         height[item[-1]] = height.get(item[-1], 0) + item[0]
         height_w_num[item[-1]] = height_w_num.get(item[-1], 0) + 1
-    print(height)
-    print(height_w_num)
+    #print(height)
+    #print(height_w_num)
     for item in height:
         for val in height_w_num:
             if item == val:
                 #print(item)
                 #print(height[item]/height_w_num[val])
                 y.append(height[item]/height_w_num[val])
-    print(y)
+    #print(y)
 
     y2 = []
     weight = {}
@@ -102,15 +102,15 @@ def plotly_double():
         #print(item)
         weight[item[-1]] = weight.get(item[-1], 0) + item[0]
         weight_w_num[item[-1]] = height_w_num.get(item[-1], 0) + 1
-    print(weight)
-    print(weight_w_num)
+    #print(weight)
+    #print(weight_w_num)
     for item in weight:
         for val in weight_w_num:
             if item == val:
                 #print(item)
                 #print(height[item]/height_w_num[val])
                 y2.append(weight[item]/weight_w_num[val])
-    print(y2)
+    #print(y2)
 
     trace1 = {
     "x": x, 
@@ -231,7 +231,7 @@ cat = []
 for item in cur:
     if item[0] not in cat:
         cat.append(str(item[0]))
-print(cat)
+#print(cat)
 
 hei = []
 height = {}
@@ -249,7 +249,7 @@ for item in height:
                 #print(item)
                 #print(height[item]/height_w_num[val])
             hei.append(height[item]/height_w_num[val])
-print(hei)
+#print(hei)
 
 
 wei = []
@@ -263,7 +263,7 @@ for item in weight:
     for val in weight_w_num:
         if item == val:
             wei.append(weight[item]/weight_w_num[val])
-print(wei)
+#print(wei)
 
 rows = zip(cat, hei, wei)
 
